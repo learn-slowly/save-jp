@@ -4,7 +4,7 @@ export const CONFIG = {
   // 한 달 목표 금액(원)
   goal: 1000000,
 
-  // 금액을 읽어 오는 주소: 구글 시트 '특별당비 현황판 요약 (공개)' (docs/시트-연결-방법.md 참고)
+  // 금액을 읽어 오는 주소: 구글 시트 '특별당비 현황판 요약 (공개)' (docs/시트-사용법.md 참고)
   sheetCsvUrl: "https://docs.google.com/spreadsheets/d/1Ap-Wv_A-SduDcBwQFygw3AxA0IoVoimIVYuhYlWWjeo/gviz/tq?tqx=out:csv&sheet=%EC%9A%94%EC%95%BD&headers=1",
 
   // 사연 칸. {월급날} 자리에는 다가오는 월급날(예: 12월 20일)이 자동으로 들어갑니다.
