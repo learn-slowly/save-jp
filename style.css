@@ -99,7 +99,7 @@ h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.2; font-weight: 900; le
 .progress { text-align: center; }
 .amount { margin: 0; }
 .amount strong { font-size: 32px; font-weight: 900; }
-.goal { color: var(--muted); font-weight: 700; }
+.goal { color: var(--muted); font-weight: 700; white-space: nowrap; }
 .bar {
   height: 22px;
   margin: 8px 0;
