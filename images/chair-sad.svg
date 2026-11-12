@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <!-- 임시 그림: 위원장 사진(무릎 꿇고 손든 모습)이 오면 이 파일을 사진으로 바꾼다 -->
+  <!-- 목표 달성 전까지 보이는 무릎 꿇고 손든 위원장 그림 -->
   <rect width="400" height="400" fill="#f4f1e8"/>
-  <text x="200" y="34" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9a9384">임시 그림 · 위원장 사진 자리</text>
   <g stroke="#2b2b2b" stroke-width="12" stroke-linecap="round" fill="none">
     <path d="M172 200 L128 82"/>
     <path d="M228 200 L272 82"/>

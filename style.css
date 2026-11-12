@@ -42,7 +42,7 @@ h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.2; font-weight: 900; le
   font-size: 16px;
 }
 
-/* 위원장 사진 + 신고서 */
+/* 위원장 그림 + 신고서 */
 .scene {
   position: relative;
   margin: 20px 0 16px;
@@ -228,7 +228,7 @@ footer { margin-top: 28px; text-align: center; font-size: 13px; font-weight: 700
 }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
-/* 컴퓨터 화면: 사진과 정보를 나란히 */
+/* 컴퓨터 화면: 그림과 정보를 나란히 */
 @media (min-width: 900px) {
   main {
     max-width: 960px;

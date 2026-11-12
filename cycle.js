@@ -3,7 +3,7 @@
 
 const FIRST_PAYDAY = Date.UTC(2026, 11, 20);
 const DAY_MS = 86400000;
-const STAGE_THRESHOLDS = [30, 60, 90, 100]; // 이 비율을 넘을 때마다 사진 단계가 하나씩 올라간다
+const STAGE_THRESHOLDS = [30, 60, 90, 100]; // 이 비율을 넘을 때마다 그림 단계가 하나씩 올라간다
 
 // 한국 시간 기준 오늘 날짜(시각 없이 UTC 자정 값으로 다룬다)
 export function todayKST(now = Date.now()) {

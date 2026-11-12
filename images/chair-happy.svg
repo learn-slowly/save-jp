@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <!-- 임시 그림: 위원장 웃는 사진이 오면 이 파일을 사진으로 바꾼다 -->
+  <!-- 목표 달성(100%) 때 보이는 웃는 위원장 그림 -->
   <rect width="400" height="400" fill="#fff6b0"/>
-  <text x="200" y="34" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9a8f3a">임시 그림 · 웃는 사진 자리</text>
   <g stroke="#FFC800" stroke-width="6" stroke-linecap="round">
     <path d="M70 120 l-24 -10 M66 170 l-26 2 M330 120 l24 -10 M334 170 l26 2"/>
   </g>
