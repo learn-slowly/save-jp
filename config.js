@@ -11,7 +11,7 @@ export const CONFIG = {
   bank: "신한은행",
   account: "140-011-219011",
   holder: "정의당 경상남도당 백아형",
-  depositMemo: "이름 + 특별당비",
+  depositMemo: "본인 실명",
 
   // 이 돈은 어디에 쓰이나
   usage: "모인 특별당비는 경남도당 당직자 월급 등 도당 살림에 쓰입니다.",
