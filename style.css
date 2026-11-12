@@ -1,9 +1,9 @@
 /* 정의당 색 (CLAUDE.md 기준) */
 :root {
   --yellow: #FFED00;
-  --red: #E8306D;
-  --green: #00A366;
-  --purple: #623E91;
+  --red: #E8326E;
+  --green: #00A367;
+  --purple: #623D91;
   --ink: #1a1a1a;
   --muted: #5b5b5b;
   --card: #ffffff;
@@ -28,6 +28,7 @@ main {
 
 /* 맨 위 */
 .hero { text-align: center; }
+.logo { display: block; width: 92px; height: auto; margin: 0 auto 8px; }
 .party { margin: 0; font-size: 14px; font-weight: 700; color: var(--purple); }
 h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.2; font-weight: 900; letter-spacing: -0.5px; }
 .dday {
@@ -185,7 +186,7 @@ footer { margin-top: 28px; text-align: center; font-size: 13px; font-weight: 700
   padding: 24px 20px 20px;
   border-radius: 20px;
   border: 3px solid var(--ink);
-  background: var(--yellow);
+  background: #fff;
   text-align: center;
 }
 .thanks-title { margin: 8px 0 4px; font-size: 28px; font-weight: 900; }
@@ -193,6 +194,7 @@ footer { margin-top: 28px; text-align: center; font-size: 13px; font-weight: 700
 .bow {
   width: 180px;
   height: 180px;
+  object-fit: contain;
   transform-origin: 50% 100%;
   animation: bow 1.6s ease-in-out .2s 2;
 }

@@ -5,7 +5,7 @@ const $ = (id) => document.getElementById(id);
 const won = (n) => `${n.toLocaleString("ko-KR")}원`;
 const manwon = (n) => (n % 10000 === 0 ? `${(n / 10000).toLocaleString("ko-KR")}만 원` : won(n));
 
-const THANKS_IMAGES = ["images/thanks-chair.svg", "images/thanks-ttami.svg"];
+const THANKS_IMAGES = ["images/thanks-chair.svg", "images/ttami-wave.png"];
 let thanksTurn = Math.floor(Math.random() * THANKS_IMAGES.length);
 let toastTimer;
 
