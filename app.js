@@ -68,14 +68,20 @@ async function loadMoney() {
 }
 
 function renderInfo() {
+  const payday = new Date(paydayFor(todayKST()));
+  const paydayText = `${payday.getUTCMonth() + 1}월 ${payday.getUTCDate()}일`;
   $("goal").textContent = manwon(CONFIG.goal);
-  $("usage").textContent = CONFIG.usage;
+  $("story-title").textContent = CONFIG.storyTitle;
+  $("story").textContent = CONFIG.story.replace("{월급날}", paydayText);
   $("memo").textContent = CONFIG.depositMemo;
   if (CONFIG.account) {
     $("bank-line").textContent = [CONFIG.bank, CONFIG.holder].filter(Boolean).join(" · ");
     $("account-number").textContent = CONFIG.account;
     $("copy-hint").hidden = false;
   }
+  $("contact-phone").textContent = CONFIG.contactPhone;
+  $("contact-phone").href = `tel:${CONFIG.contactPhone.replace(/\D/g, "")}`;
+  $("contact-name").textContent = CONFIG.contactName;
 }
 
 function openThanks() {

@@ -131,6 +131,11 @@ h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.2; font-weight: 900; le
 .card h2 { margin: 0 0 8px; font-size: 20px; }
 .card p { margin: 0 0 10px; }
 .members-only { font-weight: 800; color: var(--purple); }
+.story h2 { color: var(--red); font-size: 22px; }
+.way { margin: 22px 0 8px; font-size: 17px; }
+.members-only + .way { margin-top: 12px; }
+.way span { font-weight: 600; color: var(--muted); }
+.phone { font-weight: 800; color: var(--red); white-space: nowrap; }
 .account {
   display: flex;
   flex-direction: column;
