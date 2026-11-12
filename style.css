@@ -28,7 +28,7 @@ main {
 
 /* 맨 위 */
 .hero { text-align: center; }
-.logo { display: block; width: 58px; height: auto; margin: 0 auto 6px; }
+.logo { display: block; width: 74px; height: auto; margin: 0 auto 8px; }
 .party { margin: 0; font-size: 14px; font-weight: 700; color: var(--purple); }
 h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.2; font-weight: 900; letter-spacing: -0.5px; }
 .dday {
