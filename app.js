@@ -1,5 +1,7 @@
-import { CONFIG } from "./config.js";
-import { todayKST, paydayFor, daysBetween, stageFor, parseCsv, summarize } from "./cycle.js";
+// 이 파일 주소에 붙은 ?v= 표시를 다른 파일에도 붙여, 새로 올린 뒤 옛 파일과 섞여 화면이 비는 일을 막는다
+const version = new URL(import.meta.url).search;
+const { CONFIG } = await import(`./config.js${version}`);
+const { todayKST, paydayFor, daysBetween, stageFor, parseCsv, summarize } = await import(`./cycle.js${version}`);
 
 const $ = (id) => document.getElementById(id);
 const won = (n) => `${n.toLocaleString("ko-KR")}원`;
