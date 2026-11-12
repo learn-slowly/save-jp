@@ -1,0 +1,243 @@
+/* 정의당 색 (CLAUDE.md 기준) */
+:root {
+  --yellow: #FFED00;
+  --red: #E8306D;
+  --green: #00A366;
+  --purple: #623E91;
+  --ink: #1a1a1a;
+  --muted: #5b5b5b;
+  --card: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
+main {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* 맨 위 */
+.hero { text-align: center; }
+.party { margin: 0; font-size: 14px; font-weight: 700; color: var(--purple); }
+h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.2; font-weight: 900; letter-spacing: -0.5px; }
+.dday {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--red);
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* 위원장 사진 + 신고서 */
+.scene {
+  position: relative;
+  margin: 20px 0 16px;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 0 var(--ink);
+  border: 3px solid var(--ink);
+}
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity .6s ease;
+}
+.photo-happy { opacity: 0; }
+.paper {
+  position: absolute;
+  left: 50%;
+  bottom: -2%;
+  width: 52%;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+.half {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  transition: transform .7s cubic-bezier(.3, 1.4, .5, 1), opacity .7s ease;
+}
+.crack {
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset .7s ease, opacity .4s ease;
+}
+[data-stage="1"] .crack { stroke-dashoffset: 70; }
+[data-stage="2"] .crack { stroke-dashoffset: 40; }
+[data-stage="3"] .crack { stroke-dashoffset: 0; opacity: 0; }
+[data-stage="3"] .half-left { transform: translateX(-7px) rotate(-4deg); }
+[data-stage="3"] .half-right { transform: translateX(7px) rotate(4deg); }
+[data-stage="4"] .crack { opacity: 0; }
+[data-stage="4"] .half-left { transform: translate(-140px, 40px) rotate(-35deg); opacity: 0; }
+[data-stage="4"] .half-right { transform: translate(140px, 40px) rotate(35deg); opacity: 0; }
+[data-stage="4"] .photo-sad { opacity: 0; }
+[data-stage="4"] .photo-happy { opacity: 1; }
+
+/* 막대 그래프 */
+.progress { text-align: center; }
+.amount { margin: 0; }
+.amount strong { font-size: 32px; font-weight: 900; }
+.goal { color: var(--muted); font-weight: 700; }
+.bar {
+  height: 22px;
+  margin: 8px 0;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: #fff;
+  overflow: hidden;
+}
+.fill {
+  width: 0;
+  height: 100%;
+  background: var(--red);
+  transition: width 1s ease;
+}
+[data-stage="4"] .fill { background: var(--green); }
+.meta { margin: 0; font-weight: 800; font-size: 18px; }
+.over { margin: 6px 0 0; color: var(--green); font-weight: 800; }
+.status { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+.total { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+
+/* 카드 */
+.card {
+  margin-top: 20px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--card);
+  border: 3px solid var(--ink);
+}
+.card h2 { margin: 0 0 8px; font-size: 20px; }
+.card p { margin: 0 0 10px; }
+.members-only { font-weight: 800; color: var(--purple); }
+.account {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 14px;
+  border: 2px dashed var(--ink);
+  border-radius: 12px;
+  background: #fffbe0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.account strong { font-size: 22px; letter-spacing: .5px; }
+.hint { font-size: 13px; color: var(--muted); }
+.memo { font-size: 15px; }
+
+/* 버튼 */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 3px solid var(--ink);
+  font: inherit;
+  font-size: 18px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.primary { background: var(--red); color: #fff; box-shadow: 0 4px 0 var(--ink); }
+.primary:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+.secondary { background: var(--ink); color: var(--yellow); }
+.ghost { background: transparent; color: var(--ink); }
+.share { display: grid; gap: 10px; margin-top: 20px; }
+
+footer { margin-top: 28px; text-align: center; font-size: 13px; font-weight: 700; color: var(--muted); }
+
+/* 감사 인사 */
+.thanks {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, .55);
+  z-index: 10;
+}
+.thanks[hidden] { display: none; }
+.thanks-box {
+  width: min(360px, 100%);
+  padding: 24px 20px 20px;
+  border-radius: 20px;
+  border: 3px solid var(--ink);
+  background: var(--yellow);
+  text-align: center;
+}
+.thanks-title { margin: 8px 0 4px; font-size: 28px; font-weight: 900; }
+.thanks-box p { margin: 0 0 16px; }
+.bow {
+  width: 180px;
+  height: 180px;
+  transform-origin: 50% 100%;
+  animation: bow 1.6s ease-in-out .2s 2;
+}
+@keyframes bow {
+  0%, 100% { transform: perspective(500px) rotateX(0); }
+  35%, 65% { transform: perspective(500px) rotateX(48deg); }
+}
+
+/* 알림 */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 20px);
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s, transform .25s;
+  z-index: 20;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* 컴퓨터 화면: 사진과 정보를 나란히 */
+@media (min-width: 900px) {
+  main {
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+    align-items: start;
+    padding-top: 40px;
+  }
+  .hero, footer { grid-column: 1 / -1; }
+  .scene { grid-column: 1; grid-row: 2 / span 3; margin-top: 24px; }
+  .progress, .card, .share { grid-column: 2; }
+  .progress { margin-top: 24px; }
+  .card:first-of-type { margin-top: 20px; }
+  h1 br { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

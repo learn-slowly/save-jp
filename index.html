@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>도당위원장을 구해주세요 — 정의당 경남도당 특별당비</title>
+  <meta name="description" content="정의당 경남도당 특별당비 모금 현황. 이번 달 100만 원이 모이면 임금체불 신고서가 찢어집니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="도당위원장을 구해주세요">
+  <meta property="og:description" content="정의당 경남도당 특별당비 모금. 이번 달 100만 원이 모이면 임금체불 신고서가 찢어집니다.">
+  <meta property="og:url" content="https://learn-slowly.github.io/save-jp/">
+  <meta property="og:image" content="https://learn-slowly.github.io/save-jp/images/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="theme-color" content="#FFED00">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body data-stage="0">
+  <main>
+    <header class="hero">
+      <p class="party">정의당 경상남도당 · 특별당비</p>
+      <h1>도당위원장을 <br>구해주세요</h1>
+      <p class="dday" id="dday">당직자 월급날까지 D-?</p>
+    </header>
+
+    <section class="scene" aria-label="모금 현황 그림">
+      <img class="photo photo-sad" src="images/chair-sad.svg" alt="임금체불 신고서를 앞에 두고 무릎 꿇고 손든 도당위원장">
+      <img class="photo photo-happy" src="images/chair-happy.svg" alt="신고서가 찢어지고 밝게 웃는 도당위원장">
+      <svg class="paper" viewBox="-20 -20 240 300" aria-hidden="true">
+        <defs>
+          <clipPath id="left-half"><polygon points="-20,-20 100,-20 100,0 92,32 108,64 94,98 107,132 93,166 106,198 95,230 100,260 100,280 -20,280"/></clipPath>
+          <clipPath id="right-half"><polygon points="220,-20 100,-20 100,0 92,32 108,64 94,98 107,132 93,166 106,198 95,230 100,260 100,280 220,280"/></clipPath>
+          <g id="sheet">
+            <rect x="0" y="0" width="200" height="260" rx="3" fill="#fff" stroke="#d6d6d6" stroke-width="2"/>
+            <text x="100" y="42" text-anchor="middle" font-size="21" font-weight="800" fill="#1a1a1a">임금체불 신고서</text>
+            <rect x="24" y="62" width="152" height="2" fill="#1a1a1a"/>
+            <text x="24" y="88" font-size="11" fill="#555">신고인: 경남도당 당직자</text>
+            <text x="24" y="106" font-size="11" fill="#555">피신고인: 도당위원장</text>
+            <rect x="24" y="124" width="152" height="6" rx="3" fill="#e9e9e9"/>
+            <rect x="24" y="140" width="130" height="6" rx="3" fill="#e9e9e9"/>
+            <rect x="24" y="156" width="146" height="6" rx="3" fill="#e9e9e9"/>
+            <rect x="24" y="172" width="110" height="6" rx="3" fill="#e9e9e9"/>
+            <circle cx="150" cy="222" r="22" fill="none" stroke="#E8306D" stroke-width="3"/>
+            <text x="150" y="227" text-anchor="middle" font-size="13" font-weight="800" fill="#E8306D">체불</text>
+          </g>
+        </defs>
+        <g class="half half-left"><use href="#sheet" clip-path="url(#left-half)"/></g>
+        <g class="half half-right"><use href="#sheet" clip-path="url(#right-half)"/></g>
+        <polyline class="crack" points="100,0 92,32 108,64 94,98 107,132 93,166 106,198 95,230 100,260" pathLength="100"/>
+      </svg>
+    </section>
+
+    <section class="progress">
+      <p class="amount"><strong id="month-total">0원</strong> <span class="goal">/ 목표 <span id="goal">100만 원</span></span></p>
+      <div class="bar" id="bar" role="progressbar" aria-label="이번 달 모금 비율" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="fill" id="fill"></div></div>
+      <p class="meta"><span id="percent">0%</span> · <span id="count">0명</span> 참여</p>
+      <p class="over" id="over" hidden></p>
+      <p class="status" id="status" hidden></p>
+      <p class="total">시작부터 모인 돈 <span id="total">0원</span></p>
+    </section>
+
+    <section class="card">
+      <h2>참여 방법</h2>
+      <p class="members-only">당원만 참여할 수 있습니다.</p>
+      <button class="account" id="copy-account" type="button">
+        <span id="bank-line">계좌 정보 준비 중</span>
+        <strong id="account-number"></strong>
+        <span class="hint" id="copy-hint" hidden>누르면 계좌번호가 복사돼요</span>
+      </button>
+      <p class="memo">입금자명: <strong id="memo"></strong></p>
+      <button class="btn primary" id="paid" type="button">입금했어요</button>
+    </section>
+
+    <section class="card">
+      <h2>이 돈은 어디에 쓰이나요</h2>
+      <p id="usage"></p>
+    </section>
+
+    <section class="share">
+      <button class="btn secondary" id="share" type="button">단톡방에 공유하기</button>
+      <button class="btn ghost" id="copy-link" type="button">링크 복사</button>
+    </section>
+
+    <footer>정의당 경상남도당</footer>
+  </main>
+
+  <div class="thanks" id="thanks" hidden>
+    <div class="thanks-box" role="dialog" aria-modal="true" aria-labelledby="thanks-title">
+      <img class="bow" id="thanks-img" src="images/thanks-chair.svg" alt="">
+      <p class="thanks-title" id="thanks-title">고맙습니다!</p>
+      <p>입금해 주셔서 감사합니다.<br>확인되는 대로 현황판에 반영할게요.</p>
+      <button class="btn primary" id="thanks-close" type="button">닫기</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

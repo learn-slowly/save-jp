@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- 임시 그림: 위원장 웃는 사진이 오면 이 파일을 사진으로 바꾼다 -->
+  <rect width="400" height="400" fill="#fff6b0"/>
+  <text x="200" y="34" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#9a8f3a">임시 그림 · 웃는 사진 자리</text>
+  <g stroke="#FFC800" stroke-width="6" stroke-linecap="round">
+    <path d="M70 120 l-24 -10 M66 170 l-26 2 M330 120 l24 -10 M334 170 l26 2"/>
+  </g>
+  <g stroke="#2b2b2b" stroke-width="12" stroke-linecap="round" fill="none">
+    <path d="M172 210 L112 110"/>
+    <path d="M228 210 L288 110"/>
+    <path d="M182 340 L170 392"/>
+    <path d="M218 340 L230 392"/>
+  </g>
+  <circle cx="112" cy="104" r="13" fill="#ffd8b0" stroke="#2b2b2b" stroke-width="5"/>
+  <circle cx="288" cy="104" r="13" fill="#ffd8b0" stroke="#2b2b2b" stroke-width="5"/>
+  <rect x="158" y="196" width="84" height="150" rx="30" fill="#4a4a4a" stroke="#2b2b2b" stroke-width="5"/>
+  <circle cx="200" cy="150" r="40" fill="#ffd8b0" stroke="#2b2b2b" stroke-width="5"/>
+  <path d="M180 140 q6 -8 12 0 M208 140 q6 -8 12 0" stroke="#2b2b2b" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M180 160 q20 24 40 0 z" fill="#E8306D" stroke="#2b2b2b" stroke-width="4" stroke-linejoin="round"/>
+</svg>
