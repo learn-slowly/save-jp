@@ -91,7 +91,7 @@ function renderInfo() {
 
 function openThanks() {
   const img = $("thanks-img");
-  // 그림을 다시 넣어 인사 동작이 매번 처음부터 나오게 한다
+  // 움직임을 껐다 켜서 인사 동작이 매번 처음부터 나오게 한다
   img.style.animation = "none";
   void img.offsetWidth;
   img.style.animation = "";
