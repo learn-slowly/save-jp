@@ -7,8 +7,6 @@ const $ = (id) => document.getElementById(id);
 const won = (n) => `${n.toLocaleString("ko-KR")}원`;
 const manwon = (n) => (n % 10000 === 0 ? `${(n / 10000).toLocaleString("ko-KR")}만 원` : won(n));
 
-const THANKS_IMAGES = [`images/thanks-chair.webp${version}`, "images/ttami-wave.png"];
-let thanksTurn = Math.floor(Math.random() * THANKS_IMAGES.length);
 let toastTimer;
 
 function toast(message) {
@@ -93,8 +91,6 @@ function renderInfo() {
 
 function openThanks() {
   const img = $("thanks-img");
-  img.src = THANKS_IMAGES[thanksTurn];
-  thanksTurn = (thanksTurn + 1) % THANKS_IMAGES.length;
   // 그림을 다시 넣어 인사 동작이 매번 처음부터 나오게 한다
   img.style.animation = "none";
   void img.offsetWidth;

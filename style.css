@@ -118,7 +118,7 @@ h1 { margin: 6px 0 10px; font-size: 34px; line-height: 1.2; font-weight: 900; le
 .meta { margin: 0; font-weight: 800; font-size: 18px; }
 .over { margin: 6px 0 0; color: var(--green); font-weight: 800; }
 .status { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
-.total { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
+.total, .note { margin: 6px 0 0; font-size: 14px; color: var(--muted); }
 
 /* 카드 */
 .card {
